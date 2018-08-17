@@ -2,7 +2,7 @@ version: '{build}'
 
 install:
 - choco install maven
-- set JAVA_HOME=C:\Program Files\Java\jdk1.8.0_162
+- set JAVA_HOME=C:\Program Files\Java\jdk1.8.0_181
 
 build_script:
 - mvn clean package --batch-mode -DskipTests

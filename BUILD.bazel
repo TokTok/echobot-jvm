@@ -1,6 +1,6 @@
-load("//tools:project.bzl", "project")
+load("//tools/project:build_defs.bzl", "project")
 
-project("echobot-jvm")
+project()
 
 java_binary(
     name = "echobot-jvm",
