@@ -1,4 +1,6 @@
+load("@rules_java//java:defs.bzl", "java_binary")
 load("//tools/project:build_defs.bzl", "project")
+load("//tools/workspace:junit5.bzl", "java_junit5_test")
 
 project()
 
@@ -14,5 +16,18 @@ java_binary(
         "//jvm-toxcore-c",
         "@log4j_log4j//jar",
         "@org_slf4j_slf4j_log4j12//jar",
+    ],
+)
+
+java_junit5_test(
+    name = "echobot-jvm-test",
+    size = "small",
+    srcs = glob(["src/test/java/**/*.java"]),
+    jvm_flags = ["-Djava.library.path=jvm-toxcore-c"],
+    test_package = "im.tox.echobot",
+    deps = [
+        ":echobot-jvm",
+        "//jvm-toxcore-api",
+        "//jvm-toxcore-c",
     ],
 )
