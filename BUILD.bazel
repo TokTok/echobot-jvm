@@ -14,8 +14,8 @@ java_binary(
     deps = [
         "//jvm-toxcore-api",
         "//jvm-toxcore-c",
-        "@log4j_log4j//jar",
-        "@org_slf4j_slf4j_log4j12//jar",
+        "@maven//:log4j_log4j",
+        "@maven//:org_slf4j_slf4j_log4j12",
     ],
 )
 
