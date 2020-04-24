@@ -6,8 +6,4 @@ install:
   - set JAVA_HOME=C:\Program Files\Java\jdk11
 
 build_script:
-  - mvn clean package --batch-mode -DskipTests
-
-# We don't have a windows build of the native library, yet.
-# test_script:
-#   - mvn clean install --batch-mode
+  - mvn clean package --batch-mode
