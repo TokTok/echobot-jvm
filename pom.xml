@@ -59,7 +59,7 @@
         <dependency>
             <groupId>org.toktok</groupId>
             <artifactId>tox4j-c_2.11</artifactId>
-            <version>0.2.2</version>
+            <version>0.2.3</version>
         </dependency>
         <dependency>
             <groupId>org.toktok</groupId>
